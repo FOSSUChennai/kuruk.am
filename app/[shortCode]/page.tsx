@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase'
+import { supabase, supabaseAdmin } from '@/lib/supabase'
 import { redirect } from 'next/navigation'
 import { notFound } from 'next/navigation'
 import { headers } from 'next/headers'
@@ -28,8 +28,8 @@ export default async function RedirectPage({ params }: Props) {
     const userAgent = headersList.get('user-agent') || null
     const ip = headersList.get('x-forwarded-for') || headersList.get('x-real-ip') || null
 
-    // Record click in clicks table
-    await supabase
+    // Record click in clicks table (use admin client for server-side writes)
+    await supabaseAdmin
       .from('clicks')
       .insert([
         {
@@ -39,10 +39,9 @@ export default async function RedirectPage({ params }: Props) {
           ip
         }
       ])
-      .catch(err => console.error('Failed to record click:', err))
 
-    // Increment click count
-    await supabase
+    // Increment click count (use admin client for server-side writes)
+    await supabaseAdmin
       .from('urls')
       .update({ click_count: (url.click_count || 0) + 1 })
       .eq('short_code', shortCode)
