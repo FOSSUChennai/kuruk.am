@@ -14,7 +14,6 @@ interface UrlShortenerFormProps {
 }
 
 export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, resetParentForm }: UrlShortenerFormProps) {
-  console.log("UrlShortenerForm re-rendered"); // Debug log for re-renders
   const [customAlias, setCustomAlias] = useState("")
   const [shortenedUrl, setShortenedUrl] = useState("")
   const [analyticsUrl, setAnalyticsUrl] = useState<string | null>(null)
@@ -28,7 +27,6 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
 
   const handleShorten = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("handleShorten called"); // Debug log
     if (!url.trim()) return
 
     if (customAlias && !isAliasValid(customAlias)) {
@@ -91,7 +89,6 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
   }
 
   const copyToClipboard = async () => {
-    console.log("copyToClipboard called"); // Debug log
     try {
       await navigator.clipboard.writeText(shortenedUrl)
       toast({
@@ -361,7 +358,6 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
                     type="button" // Explicitly set type to "button" to prevent form submission
                     onClick={(e) => {
                       e.preventDefault(); // Prevent any default form submission behavior
-                      console.log("QR Code Copy button clicked"); // Debug log
                       copyQrCodeToClipboard();
                     }}
                     className="absolute inset-0 flex items-center justify-center bg-black/50 text-white opacity-0 hover:opacity-100 transition-opacity rounded-lg"
