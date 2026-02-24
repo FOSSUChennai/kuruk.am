@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { supabase, supabaseAdmin } from '@/lib/supabase'
 import { randomBytes } from 'crypto'
 
 function generateShortCode(): string {
@@ -70,7 +70,8 @@ export async function POST(request: NextRequest) {
     // Generate analytics token if enabled
     const analyticsToken = enableAnalytics ? generateAnalyticsToken() : null
 
-    const { data, error } = await supabase
+    // Use admin client for server-side writes
+    const { data, error } = await supabaseAdmin
       .from('urls')
       .insert([
         {
