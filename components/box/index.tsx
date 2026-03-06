@@ -14,14 +14,7 @@ export function WaitlistWrapper({ children }: PropsWithChildren) {
       <div className="flex flex-col items-center gap-4 flex-1 text-center w-full p-8 pb-4">
         <div>
           <div className="flex justify-center items-center gap-4 mx-auto">
-            <Image
-              src="/ssnlogo.webp"
-              alt="SSN Logo"
-              width={80}
-              height={80}
-              priority
-              className="dark:invert-0 invert"
-            />
+
             <Image
               src="/foss.png"
               alt="FOSS Logo"
