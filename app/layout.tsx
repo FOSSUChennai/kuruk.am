@@ -40,9 +40,9 @@ export default async function RootLayout({
         <Providers defaultTheme="system">
           <MeshGradientComponent
             colors={[
-              "#FF6B35", // Orange
+              "#06B051", // Green
               "#FFFFFF", // White
-              "#FFA366", // Light orange
+              "#000000", // Black
               "#FFFFFF", // White
             ]}
             speed={1.5}
@@ -68,6 +68,6 @@ export default async function RootLayout({
 }
 
 export const metadata = {
-  title: "ssn.lat - URL Shortener",
-  description: "Transform your long URLs into clean, shareable links for SSN College of Engineering Students",
+  title: "kuruk.am - URL Shortener",
+  description: "Transform your long URLs into clean, shareable links",
 }

@@ -135,13 +135,13 @@ export function QrCodeGenerator({ url, setUrl, isValidHttpUrl }: QrCodeGenerator
             setShowQrCode(false); // Hide QR code when URL changes
           }}
           placeholder="Paste your long URL here..."
-          className="w-full px-4 py-3 bg-gray-11/5 border border-gray-11/10 rounded-xl text-slate-12 placeholder:text-gray-9 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500/30 transition-all"
+          className="w-full px-4 py-3 bg-gray-11/5 border border-gray-11/10 rounded-xl text-slate-12 placeholder:text-gray-9 focus:outline-none focus:ring-2 focus:ring-[#06B051]/20 focus:border-[#06B051]/30 transition-all"
           required
         />
         <button
           onClick={handleGenerateQrCode}
           disabled={!url}
-          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+          className="w-full bg-gradient-to-r from-[#06B051] to-[#05A049] hover:from-[#05A049] hover:to-[#049041] disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
         >
           Generate QR Code
         </button>
@@ -149,8 +149,8 @@ export function QrCodeGenerator({ url, setUrl, isValidHttpUrl }: QrCodeGenerator
       {/* </div> */}
 
       {showQrCode && url && ( // Only show QR code if showQrCode is true and URL is present
-        <div className="relative bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 border border-orange-200 dark:border-orange-800/30 rounded-xl p-4 flex flex-col items-center justify-center space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
-          <p className="text-xs text-orange-600 dark:text-orange-400 font-medium mb-1">QR Code for: {url}</p>
+        <div className="relative bg-gradient-to-r from-[#06B051]/10 to-[#06B051]/20 dark:from-[#06B051]/10 dark:to-[#06B051]/20 border border-[#06B051]/30 dark:border-[#06B051]/30 rounded-xl p-4 flex flex-col items-center justify-center space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+          <p className="text-xs text-[#06B051] dark:text-[#06B051] font-medium mb-1">QR Code for: {url}</p>
           <div ref={qrCodeRef} className="relative p-2 bg-white rounded-lg group">
             <QRCode value={url} size={180} />
             <button
@@ -166,7 +166,7 @@ export function QrCodeGenerator({ url, setUrl, isValidHttpUrl }: QrCodeGenerator
             <button
               onClick={downloadQrCode}
               disabled={!qrCodeDataUrl}
-              className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+              className="flex-1 bg-gradient-to-r from-[#06B051] to-[#05A049] hover:from-[#05A049] hover:to-[#049041] disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
             >
               <Download className="w-5 h-5" />
               Download QR
@@ -177,7 +177,7 @@ export function QrCodeGenerator({ url, setUrl, isValidHttpUrl }: QrCodeGenerator
               setUrl("");
               setShowQrCode(false);
             }}
-            className="absolute top-4 left-4 text-orange-600 dark:text-orange-400 hover:text-orange-700 dark:hover:text-orange-300 transition-colors"
+            className="absolute top-4 left-4 text-[#06B051] dark:text-[#06B051] hover:text-[#05A049] dark:hover:text-[#05A049] transition-colors"
           >
             <ArrowLeft className="w-6 h-6" />
           </button>

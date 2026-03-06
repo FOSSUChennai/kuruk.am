@@ -52,7 +52,7 @@ export default function AnalyticsPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
         <div className="text-center">
-          <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-8 h-8 border-2 border-[#06B051]/30 border-t-[#06B051] rounded-full animate-spin mx-auto mb-4"></div>
           <p className="text-slate-400">Loading analytics...</p>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function AnalyticsPage() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center p-4">
         <div className="text-center">
           <p className="text-red-400 mb-4">{error || 'Analytics not found'}</p>
-          <Link href="/" className="text-orange-500 hover:text-orange-400">
+          <Link href="/" className="text-[#06B051] hover:text-[#07C05D]">
             Return home
           </Link>
         </div>
@@ -106,7 +106,7 @@ export default function AnalyticsPage() {
         >
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-[#06B051] hover:text-[#07C05D] mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back
@@ -130,13 +130,13 @@ export default function AnalyticsPage() {
               href={`/${data.shortCode}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-500 hover:text-orange-400 font-medium truncate flex items-center gap-2"
+              className="text-[#06B051] hover:text-[#07C05D] font-medium truncate flex items-center gap-2"
             >
-              ssn.lat/{data.shortCode}
+              kuruk.am/{data.shortCode}
               <ExternalLink className="w-3 h-3 flex-shrink-0" />
             </a>
             <button
-              onClick={() => copyToClipboard(`https://ssn.lat/${data.shortCode}`)}
+              onClick={() => copyToClipboard(`https://kuruk.am/${data.shortCode}`)}
               className="p-2 hover:bg-slate-800 rounded-lg transition-colors text-slate-400 hover:text-slate-200"
               title="Copy short URL"
             >
@@ -161,9 +161,9 @@ export default function AnalyticsPage() {
           transition={{ delay: 0.2 }}
           className="grid grid-cols-2 gap-4 mb-6"
         >
-          <div className="bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-500/20 rounded-xl p-4 sm:p-6">
-            <p className="text-sm text-orange-400/70 font-medium mb-2">Total Clicks</p>
-            <p className="text-3xl sm:text-4xl font-bold text-orange-500">
+          <div className="bg-gradient-to-br from-[#06B051]/10 to-[#06B051]/5 border border-[#06B051]/20 rounded-xl p-4 sm:p-6">
+            <p className="text-sm text-[#06B051]/70 font-medium mb-2">Total Clicks</p>
+            <p className="text-3xl sm:text-4xl font-bold text-[#06B051]">
               {data.totalClicks}
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function AnalyticsPage() {
                 className="flex-1 flex flex-col items-center justify-end gap-1 group"
               >
                 <div
-                  className="w-full bg-gradient-to-t from-orange-500 to-orange-400 rounded-t opacity-70 hover:opacity-100 transition-opacity"
+                  className="w-full bg-gradient-to-t from-[#06B051] to-[#07C05D] rounded-t opacity-70 hover:opacity-100 transition-opacity"
                   style={{
                     height: `${(clicks / maxClicks) * 100}%`,
                     minHeight: clicks > 0 ? '4px' : '0'

@@ -52,7 +52,7 @@ export default function AnalyticsPage() {
     return (
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
         <div className="text-center">
-          <div className="w-8 h-8 border-2 border-orange-500/30 border-t-orange-500 rounded-full animate-spin mx-auto mb-3"></div>
+          <div className="w-8 h-8 border-2 border-[#06B051]/30 border-t-[#06B051] rounded-full animate-spin mx-auto mb-3"></div>
           <p className="text-slate-600 text-sm">Loading analytics</p>
         </div>
       </div>
@@ -64,7 +64,7 @@ export default function AnalyticsPage() {
       <div className="min-h-screen bg-white flex items-center justify-center p-4">
         <div className="text-center">
           <p className="text-red-600 mb-4">{error || 'Analytics not found'}</p>
-          <Link href="/" className="text-orange-500 hover:text-orange-600">
+          <Link href="/" className="text-[#06B051] hover:text-[#05A049]">
             Return home
           </Link>
         </div>
@@ -106,7 +106,7 @@ export default function AnalyticsPage() {
         >
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-600 mb-6 transition-colors"
+            className="inline-flex items-center gap-2 text-[#06B051] hover:text-[#05A049] mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             Back
@@ -122,34 +122,34 @@ export default function AnalyticsPage() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="bg-orange-50 border border-orange-200 rounded-xl p-4 sm:p-6 mb-6"
+          className="bg-[#06B051]/10 border border-[#06B051]/30 rounded-xl p-4 sm:p-6 mb-6"
         >
-          <p className="text-sm text-orange-700 font-medium mb-3">Short URL</p>
-          <div className="flex items-center justify-between gap-3 bg-white rounded-lg p-3 border border-orange-100">
+          <p className="text-sm text-[#06B051] font-medium mb-3">Short URL</p>
+          <div className="flex items-center justify-between gap-3 bg-white rounded-lg p-3 border border-[#06B051]/20">
             <a
               href={`/${data.shortCode}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-orange-600 hover:text-orange-700 font-medium truncate flex items-center gap-2"
+              className="text-[#06B051] hover:text-[#05A049] font-medium truncate flex items-center gap-2"
             >
-              ssn.lat/{data.shortCode}
+              kuruk.am/{data.shortCode}
               <ExternalLink className="w-3 h-3 flex-shrink-0" />
             </a>
             <button
-              onClick={() => copyToClipboard(`https://ssn.lat/${data.shortCode}`)}
-              className="p-2 hover:bg-orange-100 rounded-lg transition-colors text-slate-600 hover:text-slate-900"
+              onClick={() => copyToClipboard(`https://kuruk.am/${data.shortCode}`)}
+              className="p-2 hover:bg-[#06B051]/10 rounded-lg transition-colors text-slate-600 hover:text-slate-900"
               title="Copy short URL"
             >
               <Copy className="w-4 h-4" />
             </button>
           </div>
 
-          <p className="text-sm text-orange-700 font-medium mt-4 mb-2">Destination URL</p>
-          <div className="bg-white rounded-lg p-3 break-all text-sm text-slate-700 border border-orange-100">
+          <p className="text-sm text-[#06B051] font-medium mt-4 mb-2">Destination URL</p>
+          <div className="bg-white rounded-lg p-3 break-all text-sm text-slate-700 border border-[#06B051]/20">
             {data.longUrl}
           </div>
 
-          <p className="text-xs text-orange-600 mt-3">
+          <p className="text-xs text-[#06B051] mt-3">
             Created on {createdDateStr}
           </p>
         </motion.div>
@@ -161,9 +161,9 @@ export default function AnalyticsPage() {
           transition={{ delay: 0.2 }}
           className="grid grid-cols-2 gap-4 mb-6"
         >
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-4 sm:p-6">
-            <p className="text-sm text-orange-700 font-medium mb-2">Total Clicks</p>
-            <p className="text-3xl sm:text-4xl font-bold text-orange-600">
+          <div className="bg-[#06B051]/10 border border-[#06B051]/30 rounded-xl p-4 sm:p-6">
+            <p className="text-sm text-[#06B051] font-medium mb-2">Total Clicks</p>
+            <p className="text-3xl sm:text-4xl font-bold text-[#06B051]">
               {data.totalClicks}
             </p>
           </div>
@@ -191,7 +191,7 @@ export default function AnalyticsPage() {
                 className="flex-1 flex flex-col items-center justify-end gap-1 group"
               >
                 <div
-                  className="w-full bg-gradient-to-t from-orange-500 to-orange-400 rounded-t opacity-75 hover:opacity-100 transition-opacity"
+                  className="w-full bg-gradient-to-t from-[#06B051] to-[#07C05D] rounded-t opacity-75 hover:opacity-100 transition-opacity"
                   style={{
                     height: `${(clicks / maxClicks) * 100}%`,
                     minHeight: clicks > 0 ? '4px' : '0'

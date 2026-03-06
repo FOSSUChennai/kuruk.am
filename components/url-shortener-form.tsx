@@ -200,7 +200,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
       {shortenedUrl && (
         <button
           onClick={resetForm}
-          className="absolute top-0 left-0 text-orange-500 hover:text-orange-600 transition-colors flex items-center gap-1"
+          className="absolute top-0 left-0 text-[#06B051] hover:text-[#04A048] transition-colors flex items-center gap-1"
           aria-label="Back to form"
         >
           <ArrowLeft className="w-6 h-6" />
@@ -218,7 +218,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
               setShowQrCodeSection(false); // Hide QR code section
             }}
             placeholder="Paste your long URL here..."
-            className="w-full px-4 py-3 bg-gray-11/5 border border-gray-11/10 rounded-xl text-slate-12 placeholder:text-gray-9 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500/30 transition-all"
+            className="w-full px-4 py-3 bg-gray-11/5 border border-gray-11/10 rounded-xl text-slate-12 placeholder:text-gray-9 focus:outline-none focus:ring-2 focus:ring-[#06B051]/20 focus:border-[#06B051]/30 transition-all"
             required
             disabled={isLoading || shortenedUrl !== ""} // Disable input if URL is shortened
           />
@@ -228,19 +228,19 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
             value={customAlias}
             onChange={(e) => setCustomAlias(e.target.value.replace(/[^a-zA-Z0-9-]/g, ""))}
             placeholder="Custom alias (optional)"
-            className="w-full px-4 py-3 bg-gray-11/5 border border-gray-11/10 rounded-xl text-slate-12 placeholder:text-gray-9 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500/30 transition-all"
+            className="w-full px-4 py-3 bg-gray-11/5 border border-gray-11/10 rounded-xl text-slate-12 placeholder:text-gray-9 focus:outline-none focus:ring-2 focus:ring-[#06B051]/20 focus:border-[#06B051]/30 transition-all"
             disabled={isLoading || shortenedUrl !== ""} // Disable input if URL is shortened
           />
 
           {/* Analytics Toggle */}
-          <div className="flex items-center gap-3 bg-orange-500/5 border border-orange-500/10 rounded-xl p-3">
+          <div className="flex items-center gap-3 bg-[#06B051]/5 border border-[#06B051]/10 rounded-xl p-3">
             <input
               type="checkbox"
               id="enable-analytics"
               checked={enableAnalytics}
               onChange={(e) => setEnableAnalytics(e.target.checked)}
               disabled={isLoading || shortenedUrl !== ""}
-              className="w-4 h-4 rounded cursor-pointer accent-orange-500"
+              className="w-4 h-4 rounded cursor-pointer accent-[#06B051]"
             />
             <label
               htmlFor="enable-analytics"
@@ -255,7 +255,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
         <button
           type="submit"
           disabled={isLoading || !url.trim() || shortenedUrl !== ""} // Disable submit if URL is shortened
-          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+          className="w-full bg-gradient-to-r from-[#06B051] to-[#05A049] hover:from-[#05A049] hover:to-[#049041] disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
         >
           {isLoading ? (
             <div className="flex items-center justify-center gap-2">
@@ -270,8 +270,8 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
 
       {shortenedUrl && (
         <div className="flex flex-col gap-4 mt-6"> {/* Added mt-6 for spacing from the form */}
-          <div className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 border border-orange-200 dark:border-orange-800/30 rounded-xl p-4 space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
-            <p className="text-xs text-orange-600 dark:text-orange-400 font-medium">Your shortened URL:</p>
+          <div className="bg-gradient-to-r from-[#06B051]/10 to-[#06B051]/20 dark:from-[#06B051]/10 dark:to-[#06B051]/20 border border-[#06B051]/30 dark:border-[#06B051]/30 rounded-xl p-4 space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+            <p className="text-xs text-[#06B051] dark:text-[#06B051] font-medium">Your shortened URL:</p>
             <div className="flex items-center justify-between gap-3">
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
@@ -279,7 +279,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
                     href={shortenedUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-orange-700 dark:text-orange-300 font-medium hover:underline truncate flex items-center gap-1"
+                    className="text-[#04A048] dark:text-[#06B051] font-medium hover:underline truncate flex items-center gap-1"
                   >
                     {shortenedUrl}
                     <ExternalLink className="w-3 h-3 flex-shrink-0" />
@@ -289,7 +289,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
               <button
                 type="button"
                 onClick={copyToClipboard}
-                className="flex items-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-medium px-3 py-2 rounded-lg transition-colors"
+                className="flex items-center gap-1 bg-[#06B051] hover:bg-[#05A049] text-white text-xs font-medium px-3 py-2 rounded-lg transition-colors"
               >
                 <Copy className="w-3 h-3" />
                 Copy
@@ -299,8 +299,8 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
 
           {/* Analytics Link Card */}
           {analyticsUrl && (
-            <div className="bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 border border-orange-200 dark:border-orange-800/30 rounded-xl p-4 space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
-              <p className="text-xs text-orange-600 dark:text-orange-400 font-medium">Analytics Dashboard:</p>
+            <div className="bg-gradient-to-r from-[#06B051]/10 to-[#06B051]/20 dark:from-[#06B051]/10 dark:to-[#06B051]/20 border border-[#06B051]/30 dark:border-[#06B051]/30 rounded-xl p-4 space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+              <p className="text-xs text-[#06B051] dark:text-[#06B051] font-medium">Analytics Dashboard:</p>
               <div className="flex items-center justify-between gap-3">
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
@@ -308,7 +308,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
                       href={analyticsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-orange-700 dark:text-orange-300 font-medium hover:underline truncate flex items-center gap-1 text-sm"
+                      className="text-[#04A048] dark:text-[#06B051] font-medium hover:underline truncate flex items-center gap-1 text-sm"
                     >
                       {analyticsUrl.replace('https://', '').replace('http://', '')}
                       <ExternalLink className="w-3 h-3 flex-shrink-0" />
@@ -324,13 +324,13 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
                       description: "Analytics link copied to clipboard.",
                     })
                   }}
-                  className="flex items-center gap-1 bg-orange-600 hover:bg-orange-700 text-white text-xs font-medium px-3 py-2 rounded-lg transition-colors"
+                  className="flex items-center gap-1 bg-[#06B051] hover:bg-[#05A049] text-white text-xs font-medium px-3 py-2 rounded-lg transition-colors"
                 >
                   <Copy className="w-3 h-3" />
                   Copy
                 </button>
               </div>
-              <p className="text-xs text-orange-600/70 dark:text-orange-400/70">
+              <p className="text-xs text-[#06B051]/70 dark:text-[#06B051]/70">
                 Share this link to let anyone view analytics without revealing the short code.
               </p>
             </div>
@@ -340,7 +340,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
             <button
               type="button"
               onClick={() => setShowQrCodeSection(true)}
-              className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+              className="w-full bg-gradient-to-r from-[#06B051] to-[#05A049] hover:from-[#05A049] hover:to-[#049041] disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               <div className="flex items-center justify-center gap-2">
                 <QrCode className="w-5 h-5" />
@@ -350,8 +350,8 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
           )}
 
           {showQrCodeSection && (
-            <div className="relative bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-950/20 dark:to-orange-900/20 border border-orange-200 dark:border-orange-800/30 rounded-xl p-4 flex flex-col items-center justify-center space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
-              <p className="text-xs text-orange-600 dark:text-orange-400 font-medium mb-1">QR Code for: {shortenedUrl}</p>
+            <div className="relative bg-gradient-to-r from-[#06B051]/10 to-[#06B051]/20 dark:from-[#06B051]/10 dark:to-[#06B051]/20 border border-[#06B051]/30 dark:border-[#06B051]/30 rounded-xl p-4 flex flex-col items-center justify-center space-y-3 animate-in fade-in-50 slide-in-from-bottom-4 duration-500">
+              <p className="text-xs text-[#06B051] dark:text-[#06B051] font-medium mb-1">QR Code for: {shortenedUrl}</p>
               <div ref={qrCodeRef} className="p-2 bg-white rounded-lg relative">
                 <QRCode value={shortenedUrl} size={180} />
                   <button
@@ -370,7 +370,7 @@ export function UrlShortenerForm({ isAliasValid, isValidHttpUrl, url, setUrl, re
                 type="button"
                 onClick={downloadQrCode}
                 disabled={!qrCodeDataUrl}
-                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
+                className="w-full bg-gradient-to-r from-[#06B051] to-[#05A049] hover:from-[#05A049] hover:to-[#049041] disabled:from-gray-400 disabled:to-gray-500 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 transform hover:scale-[1.02] disabled:scale-100 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
               >
                 <div className="flex items-center justify-center gap-2">
                   <Download className="w-5 h-5" />

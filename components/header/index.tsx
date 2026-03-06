@@ -21,19 +21,19 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
           <div className="flex items-center gap-6 px-6 py-3">
             <button
               onClick={() => setActiveTab("abt")}
-              className={`text-lg font-medium ${activeTab === "abt" ? "text-orange-500" : "text-slate-10 hover:text-orange-400"}`}
+              className={`text-lg font-medium ${activeTab === "abt" ? "text-[#06B051]" : "text-slate-10 hover:text-[#06B051]"}`}
             >
               abt
             </button>
             <button
               onClick={() => setActiveTab("url")}
-              className={`text-lg font-medium ${activeTab === "url" ? "text-orange-500" : "text-slate-10 hover:text-orange-400"}`}
+              className={`text-lg font-medium ${activeTab === "url" ? "text-[#06B051]" : "text-slate-10 hover:text-[#06B051]"}`}
             >
               url
             </button>
             <button
               onClick={() => setActiveTab("qr")}
-              className={`text-lg font-medium ${activeTab === "qr" ? "text-orange-500" : "text-slate-10 hover:text-orange-400"}`}
+              className={`text-lg font-medium ${activeTab === "qr" ? "text-[#06B051]" : "text-slate-10 hover:text-[#06B051]"}`}
             >
               qr
             </button>

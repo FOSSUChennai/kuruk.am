@@ -1,8 +1,8 @@
-# ssn.lat (Lakshya's Advanced TinyURLs)
+# kuruk.am - Modern URL Shortener
 
-![ssn.lat Screenshot](./public/ss.png)
+![kuruk.am Screenshot](./public/ss_kurukam.png)
 
-A modern, fast URL shortener built specifically for SSN College of Engineering students by the Lakshya E-Cell community. Transform your long URLs into clean, shareable links with custom aliases and real-time analytics.
+A modern, fast URL shortener forked from ssn.lat (originally built by SSN Lakshya). Transform your long URLs into clean, shareable links with custom aliases and real-time analytics.
 
 ## ✨ Features
 
@@ -39,8 +39,8 @@ A modern, fast URL shortener built specifically for SSN College of Engineering s
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/ssn.lat.git
-   cd ssn.lat
+   git clone https://github.com/yourusername/kuruk.am.git
+   cd kuruk.am
    ```
 
 2. **Install dependencies**
@@ -75,7 +75,7 @@ A modern, fast URL shortener built specifically for SSN College of Engineering s
    ```env
    NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   NEXT_PUBLIC_SITE_URL=https://ssn.lat
+   NEXT_PUBLIC_SITE_URL=https://kuruk.am
    ```
 
 5. **Run the development server**
@@ -93,7 +93,7 @@ A modern, fast URL shortener built specifically for SSN College of Engineering s
 1. **Input Validation**: User submits a long URL with optional custom alias
 2. **Code Generation**: System generates a unique 6-character short code using Base62 encoding
 3. **Database Storage**: URL mapping is stored in Supabase with metadata
-4. **Response**: Returns shortened URL in format `https://ssn.lat/shortcode`
+4. **Response**: Returns shortened URL in format `https://kuruk.am/shortcode`
 
 ### Redirection Process
 
@@ -105,7 +105,7 @@ A modern, fast URL shortener built specifically for SSN College of Engineering s
 ### Code Structure
 
 ```
-ssn.lat/
+kuruk.am/
 ├── app/                    # Next.js App Router
 │   ├── [shortCode]/       # Dynamic route for redirects
 │   ├── api/shorten/       # URL shortening API endpoint
@@ -119,15 +119,12 @@ ssn.lat/
 ├── lib/
 │   └── supabase.ts       # Supabase client configuration
 └── public/               # Static assets
-    ├── ssnlogo.webp      # SSN logo
-    └── lakshya.png       # Lakshya E-Cell logo
 ```
 
 ## 🎨 Design Features
 
-- **Animated Background**: Dynamic mesh gradient with orange/white color scheme
-- **Logo Integration**: SSN College and Lakshya E-Cell branding
-- **Theme Awareness**: SSN logo inverts to black in light mode
+- **Animated Background**: Dynamic mesh gradient with green/white/black color scheme
+- **Theme Awareness**: Automatic theme switching
 - **Micro-interactions**: Hover effects, loading states, and smooth transitions
 - **Responsive**: Mobile-first design approach
 
@@ -162,7 +159,7 @@ Create a new short URL.
 
 ```json
 {
-  "shortUrl": "https://ssn.lat/mylink",
+  "shortUrl": "https://kuruk.am/mylink",
   "shortCode": "mylink"
 }
 ```
@@ -187,13 +184,7 @@ Create a new short URL.
 
 ## 🤝 Contributing
 
-We welcome contributions from the SSN community! Please read our contributing guidelines and feel free to submit pull requests.
-
-## 🫂 Our Contributors
-
-<a href="https://github.com/ssnlakshya/ssn.lat/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ssnlakshya/ssn.lat" />
-</a>
+We welcome contributions! Please feel free to submit pull requests.
 
 ## 📝 License
 
@@ -201,8 +192,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🏫 About
 
-Built with ❤️ for **SSN College of Engineering** students by the **Lakshya E-Cell** community. This URL shortener serves our college community with a fast, reliable way to share links across campus activities, events, and projects.
+A modern URL shortener forked from ssn.lat, originally created by **SSN Lakshya** (the entrepreneurship club of SSN College of Engineering). This project has been rebranded and customized for broader use.
 
 ---
 
-**Made by the SSN Community | Powered by Lakshya E-Cell**
+**Credits**: Originally built by SSN Lakshya | Fork maintained at kuruk.am

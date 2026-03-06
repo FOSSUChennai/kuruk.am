@@ -69,7 +69,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl sm:text-3xl font-semibold text-slate-12 text-balance">ssn.lat</h1>
+          <h1 className="text-2xl sm:text-3xl font-semibold text-slate-12 text-balance">kuruk.am</h1>
           <p className="text-slate-10 text-pretty leading-relaxed">
             Transform your long URLs into clean, shareable links.
           </p>
@@ -106,6 +106,20 @@ export default function Home() {
           </div>
         )}
         {/* </motion.div> */}
+
+        {/* Glassmorphism Credits Section */}
+        <motion.div
+          className="mt-8 text-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.8 }}
+        >
+          <div className="inline-block backdrop-blur-md bg-white/10 dark:bg-black/10 border border-white/20 dark:border-white/10 rounded-full px-4 py-2 shadow-lg">
+            <p className="text-xs text-slate-11">
+              Originally built by <a href="https://ssn.lat" target="_blank" rel="noopener noreferrer" className="font-semibold text-slate-12 hover:text-[#06B051] transition-colors">SSN Lakshya</a>
+            </p>
+          </div>
+        </motion.div>
       </WaitlistWrapper>
       </motion.div>
     </>
