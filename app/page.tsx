@@ -8,6 +8,7 @@ import { UrlShortenerForm } from "@/components/url-shortener-form"
 import { QrCodeGenerator } from "@/components/qr-code-generator"
 import { Header } from "@/components/header" // Import Header
 import About from "@/components/abt-page";
+import { ContributeButton } from "@/components/contribute-button";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("url"); // "url", "qr", "about"
@@ -69,7 +70,10 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl sm:text-3xl font-semibold text-slate-12 text-balance">kuruk.am</h1>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-slate-12 text-balance">kuruk.am</h1>
+            <ContributeButton />
+          </div>
           <p className="text-slate-10 text-pretty leading-relaxed">
             Transform your long URLs into clean, shareable links.
           </p>

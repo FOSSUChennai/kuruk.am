@@ -21,7 +21,7 @@ export function WaitlistWrapper({ children }: PropsWithChildren) {
               width={80}
               height={80}
               priority
-              className="rounded-2xl"
+              className="rounded-2xl "
             />
           </div>
         </div>
